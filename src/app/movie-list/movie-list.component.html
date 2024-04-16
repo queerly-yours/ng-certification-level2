@@ -1,0 +1,46 @@
+
+
+<div class="movies-list-container">
+    <div class="movies-filter">
+        <h3>
+            Filters
+        </h3>
+
+        <div class="form-container">
+            <form [formGroup]="filters">
+                <div class="title-filter">
+                    Title: 
+                    <input formControlName="title">
+                </div>
+                <div class="release-date-filter">
+                    Release year:
+                    <input formControlName="release_year">
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    @for (movie of filteredMoviesList; track $index) {
+    <div class="movie-item">
+        <div class="movie-summary">
+            <h3>
+                {{ movie.title }}
+            </h3>
+            <div class="movie-additional-details">
+                <div class="font-size__small">
+                    Release Date: {{movie.release_date | date:'yyyy-MM-dd'}}
+                </div>
+                <div class="font-size__small">
+                    Budget: {{movie.budget | customCurrency }}
+                </div>
+                <div class="font-size__small">
+                    Duration: {{movie.duration | duration }}
+                </div>
+
+            </div>
+        </div>
+        <button [id]="movie.id" (click)="navigateToMovieDetails(movie.id)"> Details </button>
+    </div>
+    }
+</div>
