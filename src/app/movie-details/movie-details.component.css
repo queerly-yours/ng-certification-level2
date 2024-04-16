@@ -1,0 +1,84 @@
+.movie-details-container {
+    display: flex;
+    justify-content: center;
+
+    .movie-details {
+        padding: 1rem;
+        background: #b3b3b3;
+        border: 1px solid grey;
+        width: 70vw;
+        display: flex;
+        flex-direction: column;
+
+        .movie-title-plot {
+            display: flex;
+            flex-direction: column;
+
+            .movie-poster-plot {
+                display: flex;
+
+                img {
+                    height: 30vh;
+                }
+
+                div {
+                    padding: 0.5em;
+                }
+            }
+        }
+
+        .movie-other-details {
+            h3 {
+                display: flex;
+                justify-content: center;
+                margin: 2em 0em 1em 0em;
+            }
+        }
+    }
+}
+
+.loader {
+    position: relative;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 70px;
+    height: 70px;
+    left: 45%;
+    top: 40vh;
+    -webkit-animation: spin 2s linear infinite;
+    /* For Safari */
+    animation: spin 2s linear infinite;
+}
+
+#overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: .5;
+}
+
+
+/* For Safari */
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,56 @@
+
+<div class="movie-details-container">
+
+    <div class="movie-details">
+
+        <div class="back">
+            <button (click)="navigateToHome()">
+                <i class="fa fa-home"></i> Back
+            </button>
+        </div>
+
+        <div class="movie-title-plot">
+            <h3>{{movieDetails.title}}</h3>
+            <div class="movie-poster-plot">
+                <img [src]="movieDetails.poster" alt="">
+                <div>
+                    <strong>Summary: </strong> {{ movieDetails.summary }}
+                </div>
+            </div>
+
+        </div>
+        <div class="movie-other-details">
+            <h3> Details</h3>
+            <table>
+                <tr>
+                    <td>Box Office</td>
+                    <td>{{ movieDetails.box_office | customCurrency }}</td>
+                </tr>
+                <tr>
+                    <td>Budget</td>
+                    <td>{{ movieDetails.budget | customCurrency }}</td>
+                </tr>
+
+                <tr>
+                    <td>Duration</td>
+                    <td>{{ movieDetails.duration | duration }}</td>
+                </tr>
+
+                <tr>
+                    <td>Producers</td>
+                    <td>{{ movieDetails.producers }}</td>
+                </tr>
+
+                <tr>
+                    <td>Cinematographers</td>
+                    <td> {{ movieDetails.cinematographers }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    @if (showLoader) {
+    <div id="overlay">
+        <div class="loader"></div>
+    </div>
+    }
+</div>
