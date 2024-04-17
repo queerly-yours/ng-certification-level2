@@ -1,6 +1,17 @@
 # HarryPotterMovies
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.1.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version **17.2.1**.
+
+## Working App available
+
+ng-certification-level2.vercel.app
+
+## Folder structure explanation
+
+src -> app:
+-> movie-list : Component to display list of all movies
+-> movie-details: Component to display details of individual movies selected in movie-list component
+-> utility: container for models, custom pipes and services
 
 ## Development server
 
@@ -25,8 +36,4 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
-## Working App available
-
-ng-certification-level2.vercel.app
 
