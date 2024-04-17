@@ -9,8 +9,11 @@ ng-certification-level2.vercel.app
 ## Folder structure explanation
 
 src -> app:
+
 -> movie-list : Component to display list of all movies
+
 -> movie-details: Component to display details of individual movies selected in movie-list component
+
 -> utility: container for models, custom pipes and services
 
 ## Development server
